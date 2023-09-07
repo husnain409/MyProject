@@ -349,7 +349,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/Enum/GameTypes.cs"
 "Assets/Scripts/GridLayout.cs"
+"Assets/Scripts/ScriptableObjects/Card.cs"
+"Assets/Scripts/ScriptableObjects/CardCollection.cs"
+"Assets/Scripts/ScriptableObjects/GameData.cs"
 -langversion:9.0
 
 /deterministic

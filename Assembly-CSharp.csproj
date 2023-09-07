@@ -57,6 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GridLayout.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\Card.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\CardCollection.cs" />
+    <Compile Include="Assets\Scripts\Enum\GameTypes.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\GameData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
