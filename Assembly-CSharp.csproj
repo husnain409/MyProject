@@ -56,11 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enum\GameTypes.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\GameData.cs" />
     <Compile Include="Assets\Scripts\GridLayout.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\Card.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CardCollection.cs" />
-    <Compile Include="Assets\Scripts\Enum\GameTypes.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\GameData.cs" />
+    <Compile Include="Assets\Scripts\CardController.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
