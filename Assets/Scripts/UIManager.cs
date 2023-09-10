@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
 
     GameData gameData;
 
+    CardGridGenerator cardGridGenerator;
+
     List<CardController> cardControllers;
 
     private void Awake()
@@ -24,9 +26,14 @@ public class UIManager : MonoBehaviour
 
         GetGameTypeFromGameData();
 
+        cardGridGenerator = new CardGridGenerator(collection, gameData);
+
         SetCardGridLayout();
 
         GenerateCards();
+
+        GameManager gameManager = (GameManager)FindObjectOfType(typeof(GameManager));
+        gameManager.CardCount = gameData.rows * gameData.columns;
     }
 
     private void GenerateCards()
@@ -38,6 +45,15 @@ public class UIManager : MonoBehaviour
             card.transform.name = "Card (" + i.ToString() + ")";
             cardControllers.Add(card.GetComponent<CardController>());
         }
+
+        for (int i = 0; i < cardCount / 2; i++)
+        {
+            Card randomCard = cardGridGenerator.GetRandomAvailableCardSO();
+            SetRandomCardToGrid(randomCard);
+
+            Card randomCardPair = cardGridGenerator.GetCardPairSO(randomCard.cardName);
+            SetRandomCardToGrid(randomCardPair);
+        }
     }
 
     private void SetCardGridLayout()
@@ -48,12 +64,12 @@ public class UIManager : MonoBehaviour
         cardGridLayout.rows = gameData.rows;
         cardGridLayout.columns = gameData.columns;
         cardGridLayout.spacing = gameData.spacing;
+        cardGridLayout.Invoke("CalculateLayoutInputHorizontal", 0.1f);
     }
 
     private void GetGameTypeFromGameData()
     {
         GameTypes gameType = (GameTypes)PlayerPrefs.GetInt("Type", (int) GameTypes.TWO);
-        Debug.Log(gameType);
 
         switch (gameType)
         {
@@ -67,5 +83,13 @@ public class UIManager : MonoBehaviour
                 gameData = gameTypeThree;
                 break;
         }
+    }
+
+
+    private void SetRandomCardToGrid(Card randomCard)
+    {
+        int index = cardGridGenerator.GetRandomCardPositionIndex();
+        CardController cardObject = cardControllers[index];
+        cardObject.SetCardDatas(gameData.background, randomCard);
     }
 }

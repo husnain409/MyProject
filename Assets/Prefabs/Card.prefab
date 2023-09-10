@@ -118,6 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab20728df8d2c74c8a8b940d6343923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frontFace: {fileID: 5749663517591645159}
+  backFace: {fileID: 3833551070727954214}
+  cardType: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!1 &4212666162052996976
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -253,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

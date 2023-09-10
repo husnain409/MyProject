@@ -57,12 +57,39 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enum\GameTypes.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\GameData.cs" />
-    <Compile Include="Assets\Scripts\GridLayout.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\Card.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\CardCollection.cs" />
-    <Compile Include="Assets\Scripts\CardController.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\CardStates\FrontState.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\HeartBummController.cs" />
+    <Compile Include="Assets\Scripts\CardStates\MemorizeState.cs" />
+    <Compile Include="Assets\Scripts\CardController.cs" />
+    <Compile Include="Assets\Scripts\CardStates\FlippingState.cs" />
+    <Compile Include="Assets\Scripts\CardStates\HideAwayState.cs" />
+    <Compile Include="Assets\Scripts\GameState\EndGameState.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
+    <Compile Include="Assets\Scripts\GameState\MatchingCardsState.cs" />
+    <Compile Include="Assets\Scripts\CardStates\BackState.cs" />
+    <Compile Include="Assets\Scripts\InputController.cs" />
+    <Compile Include="Assets\Scripts\CardStates\BackFlippingState.cs" />
+    <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\Scripts\ScoreEntry.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\GameData.cs" />
+    <Compile Include="Assets\Scripts\GameState\GameState.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\GameState\CardSelectionState.cs" />
+    <Compile Include="Assets\Scripts\CardGridGenerator.cs" />
+    <Compile Include="Assets\Scripts\GridLayout.cs" />
+    <Compile Include="Assets\Scripts\GameState\MemorizeCardsState.cs" />
+    <Compile Include="Assets\Scripts\Sound.cs" />
+    <Compile Include="Assets\Scripts\GameState\PauseGameState.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\Card.cs" />
+    <Compile Include="Assets\Scripts\GameState\PairSelectionState.cs" />
+    <Compile Include="Assets\Scripts\HeartsManager.cs" />
+    <Compile Include="Assets\Scripts\CardStates\CardState.cs" />
+    <Compile Include="Assets\Scripts\DifficultyHelper.cs" />
+    <Compile Include="Assets\Scripts\TimerController.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\CardCollection.cs" />
+    <Compile Include="Assets\Scripts\SaveData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
